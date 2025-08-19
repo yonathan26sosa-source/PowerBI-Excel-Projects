@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <title>Mi Portafolio Web</title>
+    <!-- Incluye el script de Tailwind CSS desde su CDN. Esto nos permite usar clases de Tailwind para el diseño. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluye la fuente 'Inter' de Google Fonts para un aspecto moderno y limpio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* Aplica la fuente Inter a todo el cuerpo de la página */
+            font-family: 'Inter', sans-serif;
+            /* Suaviza el texto para una mejor legibilidad */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Estilos personalizados si es necesario. En este caso, no se necesitan muchos gracias a Tailwind. */
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Sección de la cabecera (Header) -->
+    <header class="bg-white shadow-md rounded-b-xl p-4 md:p-6 mb-8 mx-4 md:mx-auto max-w-7xl">
+        <nav class="flex justify-between items-center">
+            <!-- Logo o nombre del sitio -->
+            <a href="#" class="text-2xl font-bold text-indigo-600">Mi Portafolio</a>
+            <!-- Menú de navegación -->
+            <ul class="hidden md:flex space-x-6 font-medium">
+                <li><a href="#about" class="hover:text-indigo-600 transition-colors">Acerca de Mí</a></li>
+                <li><a href="#projects" class="hover:text-indigo-600 transition-colors">Proyectos</a></li>
+                <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contacto</a></li>
+            </ul>
+            <!-- Botón de menú para móviles (oculto en escritorio) -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <!-- Icono de menú SVG para una apariencia limpia -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Menú desplegable para móviles (inicialmente oculto) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-lg">
+            <ul class="space-y-2 p-4 font-medium">
+                <li><a href="#about" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Acerca de Mí</a></li>
+                <li><a href="#projects" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Proyectos</a></li>
+                <li><a href="#contact" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Sección Acerca de Mí -->
+        <section id="about" class="bg-white p-6 md:p-10 rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Acerca de Mí</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+                <!-- Foto de perfil con bordes redondeados y sombra -->
+                <img src="https://placehold.co/150x150/8a2be2/ffffff?text=Tu+Foto" alt="Foto de Perfil" class="w-32 h-32 rounded-full object-cover border-4 border-indigo-400 shadow-lg">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-semibold text-gray-700">¡Hola! Soy [Tu Nombre]</h3>
+                    <p class="mt-2 text-gray-600 leading-relaxed">
+                        Soy un desarrollador web apasionado por crear experiencias digitales innovadoras y fáciles de usar.
+                        Me especializo en el desarrollo front-end, utilizando tecnologías como HTML, CSS y JavaScript para construir
+                        interfaces interactivas. Me encanta aprender y enfrentar nuevos desafíos para mejorar mis habilidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="projects" class="bg-white p-6 md:p-10 rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Mis Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Proyecto 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/3498db/ffffff?text=Proyecto+1" alt="Imagen del Proyecto 1" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg text-gray-700">Proyecto de E-commerce</h3>
+                        <p class="text-gray-500 mt-2">Un sitio de compras en línea con carrito de compras y gestión de productos.</p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 transition-colors font-medium">Ver Proyecto &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Proyecto+2" alt="Imagen del Proyecto 2" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg text-gray-700">Aplicación del Clima</h3>
+                        <p class="text-gray-500 mt-2">Una app que muestra el pronóstico del tiempo utilizando una API de datos.</p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 transition-colors font-medium">Ver Proyecto &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Proyecto+3" alt="Imagen del Proyecto 3" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg text-gray-700">Blog Personal</h3>
+                        <p class="text-gray-500 mt-2">Un blog con posts dinámicos y un diseño minimalista.</p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 transition-colors font-medium">Ver Proyecto &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="bg-white p-6 md:p-10 rounded-xl shadow-md mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Contacto</h2>
+            <div class="max-w-xl mx-auto">
+                <p class="text-center text-gray-600 mb-6">¿Interesado en trabajar juntos? Envíame un mensaje.</p>
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition-all p-2">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition-all p-2">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition-all p-2"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-indigo-700 transition-colors">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Sección del pie de página (Footer) -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-6 mt-8 rounded-t-xl mx-4 md:mx-auto max-w-7xl">
+        <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+        <div class="mt-2 space-x-4">
+            <!-- Iconos de redes sociales (puedes reemplazar con tus enlaces) -->
+            <a href="#" class="hover:text-white transition-colors">Twitter</a>
+            <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            <a href="#" class="hover:text-white transition-colors">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Script de JavaScript para la funcionalidad del menú móvil -->
+    <script>
+        // Obtiene el botón del menú móvil y el menú desplegable por su ID
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Agrega un 'listener' de evento de clic al botón del menú
+        mobileMenuBtn.addEventListener('click', () => {
+            // Alterna la clase 'hidden' para mostrar u ocultar el menú
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
